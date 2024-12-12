@@ -10,5 +10,10 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  get "/blog_posts/index", to: "blog_posts#index"
+  # order matter new should be first before show
+  get "/blog_posts/new", to: "blog_posts#new", as: :new_blog_post
+  get "/blog_posts/:id", to: "blog_posts#show", as: :blog_post
+  post "/blog_posts", to: "blog_posts#create", as: :blog_posts
+  root "blog_posts#index"
 end
