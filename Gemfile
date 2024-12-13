@@ -52,9 +52,9 @@ group :development, :test do
 
   gem "pry"
 
-  gem 'rspec-rails', '~> 7.1'
+  gem "rspec-rails", "~> 7.1"
   gem "rails-controller-testing"
-  gem 'shoulda-matchers', '~> 6.0'
+  gem "shoulda-matchers", "~> 6.0"
 end
 
 
